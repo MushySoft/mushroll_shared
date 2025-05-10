@@ -19,7 +19,7 @@ jobs:
         run: pip install uv
 
       - name: 📦 Install dependencies
-        run: uv venv && uv pip install
+        run: uv venv && uv tree
 
       - name: 🔎 Ruff (linting)
         run: ruff check .
