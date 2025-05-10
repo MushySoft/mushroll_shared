@@ -19,16 +19,15 @@ jobs:
         run: pip install uv
 
       - name: 📦 Install dependencies
-        run: uv venv && uv tree
+        run: |
+          uv pip install --editable .
+          uv pip install ruff mypy pytest
 
-      - name: 📦 Activate venv
-        run: source .venv/bin/activate
-
-      - name: 🔎 Ruff (linting)
+      - name: 🔎 Ruff
         run: python -m ruff check .
 
-      - name: 🔎 Mypy (type checking)
+      - name: 🔎 Mypy
         run: python -m mypy .
 
-      - name: 🧪 Run Pytest
+      - name: 🧪 Pytest
         run: python -m pytest --maxfail=1 --disable-warnings
