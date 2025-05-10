@@ -1,0 +1,17 @@
+[project]
+name = "mushroll_sharedshared"
+version = "0.1.0"
+description = "Shared models, schemas and brokers for the casino platform"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2.0",
+    "faststream[rabbitmq]>=0.4.6"
+]
+
+[tool.ruff]
+select = ["E", "F", "I", "N", "UP"]
+line-length = 100
+
+[tool.mypy]
+strict = true
+ignore_missing_imports = true
