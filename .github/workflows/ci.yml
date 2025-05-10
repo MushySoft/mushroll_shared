@@ -18,6 +18,9 @@ jobs:
       - name: 📦 Install uv
         run: pip install uv
 
+      - name: 📦 Activate venv
+        run: source .venv/bin/activate
+
       - name: 📦 Install dependencies
         run: uv venv && uv tree
 
