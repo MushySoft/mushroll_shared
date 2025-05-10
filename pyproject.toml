@@ -1,5 +1,5 @@
 [project]
-name = "mushroll_sharedshared"
+name = "mushroll_shared"
 version = "0.1.0"
 description = "Shared models, schemas and brokers for the casino platform"
 requires-python = ">=3.11"
