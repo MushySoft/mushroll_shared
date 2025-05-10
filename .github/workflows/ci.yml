@@ -20,8 +20,8 @@ jobs:
 
       - name: 📦 Install dependencies
         run: |
-          uv pip install --editable .
-          uv pip install ruff mypy pytest
+          uv pip install --editable . --system
+          uv pip install ruff mypy pytest --system
 
       - name: 🔎 Ruff
         run: python -m ruff check .
