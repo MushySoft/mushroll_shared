@@ -22,10 +22,10 @@ jobs:
         run: uv venv && uv tree
 
       - name: 🔎 Ruff (linting)
-        run: ruff check .
+        run: python -m ruff check .
 
       - name: 🔎 Mypy (type checking)
-        run: mypy .
+        run: python -m mypy .
 
       - name: 🧪 Run Pytest
-        run: pytest --maxfail=1 --disable-warnings
+        run: python -m pytest --maxfail=1 --disable-warnings
